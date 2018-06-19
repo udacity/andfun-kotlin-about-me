@@ -3,6 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Use a data block to declare variables. -->
+    <data>
+
+        <!-- Declare a variable by specifying a name and a data type. -->
+        <!-- Use fully qualified name for the type. -->
+        <variable
+            name="aboutMe"
+            type="com.example.aboutme.MyName" />
+    </data>
+
 <LinearLayout
 android:orientation="vertical"
     android:layout_width="match_parent"
@@ -15,19 +25,25 @@ android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!-- Use "@={aboutMe.nickname}" annotation to reference a property -->
+    <!-- Reference the declared object (aboutMe) and the property (nickname). -->
     <TextView
         android:id="@+id/nickname"
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@={aboutMe.nickname}"
         android:visibility="gone"/>
 
+    <!-- Use "@={aboutMe.name}" annotation to reference a property -->
+    <!-- Reference the declared object (aboutMe) and the property (name). -->
     <EditText
         android:id="@+id/nickname_edit"
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:text="@={aboutMe.name}"
         android:hint="@string/what_is_your_nickname" />
 
     <Button
