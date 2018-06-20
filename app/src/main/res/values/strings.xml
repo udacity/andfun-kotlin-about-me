@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">About Me</string>
-    <string name="name">Aleks Haecky</string>
     <!-- Break paragraphs without extra spacing, by putting \n at the beginning of next line.-->
     <string name="bio">Hi, my name is Aleks.
 \nI love fish.

@@ -1,10 +1,10 @@
-package com.example.aboutme
+package com.example.android.aboutme
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.example.aboutme.databinding.ActivityMainBinding
+import com.example.android.aboutme.databinding.ActivityMainBinding
 
 /**
  * Main Activity of the AboutMe app. This app demonstrates:

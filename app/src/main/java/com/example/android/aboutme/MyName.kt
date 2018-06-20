@@ -1,4 +1,4 @@
-package com.example.aboutme
+package com.example.android.aboutme
 
 /**
  * Container for a name and a nickname strings.
@@ -6,5 +6,4 @@ package com.example.aboutme
  */
 data class MyName(
         var name: String = "",
-        var nickname: String = "") {
-}
+        var nickname: String = "")
