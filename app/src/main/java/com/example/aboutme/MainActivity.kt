@@ -50,6 +50,8 @@ class MainActivity : AppCompatActivity() {
     private fun editNickname() {
         // Set the text for nicknameText to the value in nicknameEdit.
         binding.myName?.nickname = binding.nicknameEdit.text.toString()
+        // Invalidate all binding expressions and request a new rebind to refresh UI
+        binding.invalidateAll()
         // Change which views are visible.
         // Remove the EditText and the Button.
         // With GONE they are invisible and do not occupy space.
