@@ -4,7 +4,6 @@
 
     <!-- Use a data block to declare variables. -->
     <data>
-
         <!-- Declare a variable by specifying a name and a data type. -->
         <!-- Use fully qualified name for the type. -->
         <variable
@@ -74,6 +73,7 @@
                     android:text="@string/bio"
                     android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
                     android:textSize="@dimen/text_size" />
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
