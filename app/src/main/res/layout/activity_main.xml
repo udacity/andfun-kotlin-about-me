@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/nameText"
         android:text="@string/name"
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/nickname"
+        android:id="@+id/nicknameText"
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
 
     <EditText
-        android:id="@+id/nickname_edit"
+        android:id="@+id/nicknameEdit"
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,13 +28,13 @@
         android:hint="@string/what_is_your_nickname" />
 
     <Button
-        android:id="@+id/button_done"
+        android:id="@+id/doneButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/done" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/starImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/yellow_star"
@@ -43,19 +44,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/bioText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/bio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/bio"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-                android:textSize="@dimen/text_size" />
-        </LinearLayout>
+            android:text="@string/bio"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textSize="@dimen/text_size" />
 
     </ScrollView>
 
