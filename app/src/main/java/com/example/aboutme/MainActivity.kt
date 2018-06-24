@@ -19,12 +19,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun addNickname(view : View) {
-        val editText = findViewById<EditText>(R.id.nickname_edit)
-        val nicknameTextView = findViewById<TextView>(R.id.nickname)
-
-        nicknameTextView.text = editText.text
-        editText.visibility = View.GONE
+        nicknameText.text = nicknameEdit.text
+        nicknameEdit.visibility = View.GONE
         view.visibility = View.GONE
-        nicknameTextView.visibility = View.VISIBLE
+        nicknameText.visibility = View.VISIBLE
     }
 }
