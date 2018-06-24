@@ -61,20 +61,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/bioText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="@string/bio"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textSize="@dimen/text_size" />
 
-                <TextView
-                    android:id="@+id/bioText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bio"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                    android:textSize="@dimen/text_size" />
-
-            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 </layout>
