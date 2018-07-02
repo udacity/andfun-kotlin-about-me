@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">About Me</string>
-    <string name="name">Aleks Haecky</string>
-    <string name="bio">Hi, my name is Aleks.\n
-        I love fish.\n
-        The kind that is alive and swims around in an aquarium or river.\n
-        Fun fact is that I have several aquariums and also a river.\n
-        I like eating fish, too.\n
-        And sometimes I even go fishing.\n
-        And even less sometimes, I actually catch something.\n
-        I\'ll be happy to teach you how to make your own aquarium.\n
-        You should ask someone else about fishing, though.</string>
+    <!-- Break paragraphs without extra spacing, by putting \n at the beginning of next line.-->
+    <string name="bio">Hi, my name is Aleks.
+\nI love fish.
+\nThe kind that is alive and swims around in an aquarium or river.
+\nFun fact is that I have several aquariums and also a river.
+\nI like eating fish, too.
+\nAnd sometimes I even go fishing.
+\nAnd even less sometimes, I actually catch something.
+\nI\'ll be happy to teach you how to make your own aquarium.
+\nYou should ask someone else about fishing, though.</string>
     <string name="what_is_your_nickname">What is your Nickname?</string>
     <string name="done">Done</string>
     <string name="yellow_star">Yellow star</string>
