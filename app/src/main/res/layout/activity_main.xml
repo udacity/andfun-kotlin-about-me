@@ -20,77 +20,80 @@ limitations under the License. -->
         <variable
             name="myName"
             type="com.example.android.aboutme.MyName" />
+
     </data>
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/bio_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/name_text"
-            style="@style/NameStyle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={myName.name}" />
+            android:orientation="vertical"
+            android:padding="32dp">
 
-        <!-- Use "@={aboutMe.nickname}" annotation to reference a property -->
-        <!-- Reference the declared object (aboutMe) and the property (nickname). -->
-        <TextView
-            android:id="@+id/nickname_text"
-            style="@style/NameStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@={myName.nickname}"
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/Widget.AboutMe.Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={myName.name}" />
 
-        <!-- Use "@={aboutMe.name}" annotation to reference a property -->
-        <!-- Reference the declared object (aboutMe) and the property (name). -->
-        <EditText
-            android:id="@+id/nickname_edit"
-            style="@style/NameStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/what_is_your_nickname"
-            android:inputType="textPersonName"
-            android:text="@={myName.nickname}" />
+            <!-- Use "@={aboutMe.nickname}" annotation to reference a property -->
+            <!-- Reference the declared object (aboutMe) and the property (nickname). -->
+            <TextView
+                android:id="@+id/nickname_text"
+                style="@style/Widget.AboutMe.Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={myName.nickname}"
+                android:visibility="gone" />
 
-        <Button
-            android:id="@+id/done_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/roboto"
-            android:text="@string/done"
-            android:textAlignment="center" />
+            <!-- Use "@={aboutMe.name}" annotation to reference a property -->
+            <!-- Reference the declared object (aboutMe) and the property (name). -->
+            <EditText
+                android:id="@+id/nickname_edit"
+                style="@style/Widget.AboutMe.Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="@string/what_is_your_nickname"
+                android:inputType="textPersonName"
+                android:text="@={myName.nickname}" />
 
-        <ImageView
-            android:id="@+id/star_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/yellow_star"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            <Button
+                android:id="@+id/done_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="@string/done"
+                android:textAlignment="center" />
 
-        <ScrollView
-            android:id="@+id/bio_scroll"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/yellow_star"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
 
             <TextView
                 android:id="@+id/bio_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:layout_marginTop="24dp"
                 android:lineSpacingExtra="@dimen/line_spacing_extra"
                 android:paddingLeft="@dimen/small_padding"
                 android:paddingRight="@dimen/small_padding"
                 android:text="@string/bio"
-                android:textAppearance="@style/NameStyle" />
+                android:textAppearance="@style/Widget.AboutMe.Name" />
 
-        </ScrollView>
-    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
 </layout>

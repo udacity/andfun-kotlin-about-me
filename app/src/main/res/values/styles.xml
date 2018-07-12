@@ -11,21 +11,24 @@ limitations under the License. -->
 
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="Theme.AboutMe" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/status</item>
+        <item name="colorAccent">@color/green</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarDividerColor">@color/divider</item>
     </style>
 
-    <style name="NameStyle">
+    <style name="Widget.AboutMe" parent="@android:style/Widget" />
+
+    <style name="Widget.AboutMe.Name">
         <item name="android:paddingTop">8dp</item>
-        <item name="android:lineSpacingExtra">8sp</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
         <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
 </resources>
