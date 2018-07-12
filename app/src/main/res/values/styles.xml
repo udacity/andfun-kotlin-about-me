@@ -21,9 +21,11 @@ limitations under the License. -->
 
     <style name="NameStyle">
         <item name="android:paddingTop">8dp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
 
 </resources>

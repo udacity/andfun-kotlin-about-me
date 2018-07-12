@@ -28,7 +28,7 @@ limitations under the License. -->
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/nameText"
+            android:id="@+id/name_text"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@ limitations under the License. -->
         <!-- Use "@={aboutMe.nickname}" annotation to reference a property -->
         <!-- Reference the declared object (aboutMe) and the property (nickname). -->
         <TextView
-            android:id="@+id/nicknameText"
+            android:id="@+id/nickname_text"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,39 +47,46 @@ limitations under the License. -->
         <!-- Use "@={aboutMe.name}" annotation to reference a property -->
         <!-- Reference the declared object (aboutMe) and the property (name). -->
         <EditText
-            android:id="@+id/nicknameEdit"
+            android:id="@+id/nickname_edit"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/what_is_your_nickname"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:text="@={myName.nickname}" />
 
         <Button
-            android:id="@+id/doneButton"
-            android:layout_width="match_parent"
+            android:id="@+id/done_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/done" />
+            android:fontFamily="@font/roboto"
+            android:text="@string/done"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
 
         <ImageView
-            android:id="@+id/starImage"
+            android:id="@+id/star_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/yellow_star"
             app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <ScrollView
+            android:id="@+id/bio_scroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/bioText"
+                android:id="@+id/bio_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/bio"
-                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/roboto"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
                 android:paddingLeft="@dimen/small_padding"
-                android:paddingRight="@dimen/small_padding"/>
+                android:paddingRight="@dimen/small_padding"
+                android:text="@string/bio"
+                android:textAppearance="@style/NameStyle"/>
 
         </ScrollView>
     </LinearLayout>
