@@ -11,8 +11,7 @@ limitations under the License. -->
 
 <resources>
     <string name="app_name">About Me</string>
-    <string name="name">Aleks Haecky</string>
-    <string name="yellow_star">Yello star</string>
+    <!-- Break paragraphs without extra spacing, by putting \n at the beginning of next line.-->
     <string name="bio">Hi, my name is Aleks.
 \n\nI love fish.
 \n\nThe kind that is alive and swims around in an aquarium or river, or a lake, and definitely the ocean.
@@ -22,8 +21,9 @@ limitations under the License. -->
 \nAnd even less sometimes, I actually catch something.
 \n\nOnce, when I was camping in Canada, and very hungry, I even caught a large salmon with my hands.
 \n\nI\'ll be happy to teach you how to make your own aquarium.
-\nYou should ask someone else about fishing, though.\n\n
-    </string>
-    <string name="what_is_your_nickname">What is your nickname</string>
+\nYou should ask someone else about fishing, though.\n\n</string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
     <string name="done">Done</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="name">Aleks Haecky</string>
 </resources>
