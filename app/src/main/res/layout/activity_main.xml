@@ -14,6 +14,12 @@
         android:textAlignment="center"
         style="@style/NameStyle" />
 
+    <!-- TODO (01) Create an EditText for entering a nickname -->
+
+    <!-- TODO (02) Create a button with the caption "Done" -->
+
+    <!-- TODO (03) Create a TextView to display the nickname -->
+
     <ImageView
         android:id="@+id/star_image"
         android:layout_width="match_parent"
