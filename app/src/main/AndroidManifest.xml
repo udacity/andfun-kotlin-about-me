@@ -2,18 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.aboutme">
 
-    <!--
-    TODO (01) Create a layout file:
-        In the project file listing, right-clicked res folder and New > Android resource file.
-        Familiarized yourself with the New Resource File pane to make the following changes.
-        Name: activity_main.xml
-        Resource type: Layout
-        Root element: LinearLayout
-        Source set: main
-        Directory name: layout
-        Clicked OK and activity_main.xml has been created in res/layouts folder.
-    -->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
