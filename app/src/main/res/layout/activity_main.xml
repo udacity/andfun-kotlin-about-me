@@ -3,4 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- TODO (01) Add a TextView and style it and extract strings -->
+
+    <!-- TODO (03) Create NameStyle, extract all dimensions -->
+
+    <!-- TODO (04) Add ImageView with star image -->
+
 </LinearLayout>
