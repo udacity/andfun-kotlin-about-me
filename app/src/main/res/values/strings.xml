@@ -11,4 +11,6 @@ limitations under the License. -->
 
 <resources>
     <string name="app_name">About Me</string>
+    <string name="name">Aleks Haecky</string>
+    <string name="yellow_star">Yello star</string>
 </resources>
