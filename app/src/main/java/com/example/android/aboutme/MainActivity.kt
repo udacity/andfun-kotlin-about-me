@@ -17,13 +17,12 @@
 package com.example.android.aboutme
 
 import android.content.Context
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import com.example.android.aboutme.databinding.ActivityMainBinding
 
 
 /**
@@ -38,16 +37,25 @@ import androidx.appcompat.app.AppCompatActivity
  */
 class MainActivity : AppCompatActivity() {
 
-    // TODO (03) Create a binding object in the MainActivity.
+    // Binding object for MainActivity.
+    // Name of the object is derived from the name of the activity or fragment.
+    private lateinit var binding: ActivityMainBinding
 
-    // TODO (09) Create an instance of MyName and set binding.myName to it.
+    // Instance of MyName data class.
+    private val myName: MyName = MyName("Aleks Haecky")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // TODO (04) Use DataBindingUtil to set the layout for MainActivity.
-        setContentView(R.layout.activity_main)
-        // TODO (05) Use the binding object to replace all calls to findViewById.
-        findViewById<Button>(R.id.done_button).setOnClickListener {
+        // Setting the content view using DataBindingUtil creates an instance of
+        // ActivityMainBinding from the supplied activity and the supplied layout. This object
+        // contains mappings between the activity and layout,
+        // and functionality to interact with them.
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        // Set the value of the myName variable that is declared and used in the layout file.
+        binding.myName = myName
+
+        // Click listener for the Done button.
+        binding.doneButton.setOnClickListener {
             addNickname(it)
         }
     }
@@ -58,15 +66,20 @@ class MainActivity : AppCompatActivity() {
      * by eliminating calls to findViewById and changing data in the binding object.
      */
     private fun addNickname(view: View) {
-        // TODO (10) set the nickname in the binding object and invalidateAll().
-        val editText = findViewById<EditText>(R.id.nickname_edit)
-        val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
+        binding.apply {
+            // Set the text for nicknameText to the value in nicknameEdit.
+            myName?.nickname = nicknameEdit.text.toString()
+            // Invalidate all binding expressions and request a new rebind to refresh UI
+            invalidateAll()
+            // Change which views are visible.
+            // Remove the EditText and the Button.
+            // With GONE they are invisible and do not occupy space.
+            nicknameEdit.visibility = View.GONE
+            doneButton.visibility = View.GONE
 
-        nicknameTextView.text = editText.text
-        editText.visibility = View.GONE
-        view.visibility = View.GONE
-        nicknameTextView.visibility = View.VISIBLE
-
+            // Make the TexView with the nickname visible.
+            nicknameText.visibility = View.VISIBLE
+        }
         // Hide the keyboard.
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
