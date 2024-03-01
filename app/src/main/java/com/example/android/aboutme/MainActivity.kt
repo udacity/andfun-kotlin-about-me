@@ -88,8 +88,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    //  Composable receive their data as parameters
     @Composable
     fun HeaderUiElement(name: String, modifier: Modifier = Modifier) {
+        // Usage of state driven approach instead of DataBinding Lib.
         var nickname by rememberSaveable { mutableStateOf("") }
         var isNicknameTextVisible by rememberSaveable { mutableStateOf(false) }
         Column(
